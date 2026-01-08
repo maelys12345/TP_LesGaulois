@@ -14,4 +14,13 @@ public String getNom() {
 	return nom;
 }
 
+public void parler(String texte) {
+	System.out.println("Le gaulois "+getNom()+": \""+texte+"\"");
+}
+
+public static void main(String[] args) {
+	Gaulois asterix=new Gaulois("Asterix",8);
+	System.out.println(asterix.getNom());
+}
+
 }
