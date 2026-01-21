@@ -17,7 +17,7 @@ public class TestGaulois {
 		panoramix.donnerPotion(abraracourcix);
 		panoramix.donnerPotion(assurancetourix);
 		panoramix.donnerPotion(agecanonix);
-		for(int i=0;i<6;i++) {
+		while(!asterix.estATerre() && !minus.estATerre()) {
 			asterix.frapper(minus);
 			minus.frapper(asterix);
 		}
