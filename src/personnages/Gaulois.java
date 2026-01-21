@@ -10,5 +10,4 @@ public class Gaulois extends Personnage {
 		return("Le gaulois "+getNom());
 	}
 
-
 }
