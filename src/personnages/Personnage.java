@@ -12,14 +12,26 @@ public abstract class Personnage {
 	public String getNom() {
 		return nom;
 	}
+	public int getForce() {
+		return force;
+	}
+	public void setForce(int newForce) {
+		force=newForce;
+	}
 	public void parler(String texte) {
 		System.out.println(donnerAuteur() + " : \""+texte+"\"");
 	}
 	protected abstract String donnerAuteur();
 	
+	protected void DonnerQuiFrappe(int forcePerso,Personnage adversaire) {
+		System.out.println(donnerAuteur()+" donne un grand coup de force "+forcePerso+" à "+adversaire.getNom());
+	}
+	
 	public void frapper(Personnage adversaire) {
-		System.out.println(donnerAuteur()+" donne un grand coup à "+adversaire.getNom());
-		adversaire.recevoirCoup(force/3);
+		if(!adversaire.estATerre() && !estATerre()) {
+			DonnerQuiFrappe(force,adversaire);
+			adversaire.recevoirCoup(force/3);
+		}
 	}
 	public void recevoirCoup(int forceCoup) {
 		force-=forceCoup;
@@ -29,6 +41,9 @@ public abstract class Personnage {
 		}else {
 			parler("Aïe!");
 		}
+	}
+	public boolean estATerre() {
+		return force==0;
 	}
 
 }
