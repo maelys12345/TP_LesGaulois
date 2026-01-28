@@ -20,7 +20,7 @@ public class Gaulois extends Personnage {
 				forcePotion=1;
 			}
 			DonnerQuiFrappe((int)(getForce()*forcePotion),adversaire);
-			adversaire.recevoirCoup((int)(getForce()*forcePotion)/3);
+			adversaire.recevoirCoup((int)(getForce()*forcePotion));
 			forcePotion-=0.5;
 		}
 	}

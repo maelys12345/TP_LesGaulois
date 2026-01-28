@@ -2,7 +2,7 @@ package personnages;
 
 public abstract class Personnage {
 	private String nom;
-	private int force;
+	protected int force;
 	
 	public Personnage(String nom,int force) {
 		this.nom=nom;
@@ -30,7 +30,7 @@ public abstract class Personnage {
 	public void frapper(Personnage adversaire) {
 		if(!adversaire.estATerre() && !estATerre()) {
 			DonnerQuiFrappe(force,adversaire);
-			adversaire.recevoirCoup(force/3);
+			adversaire.recevoirCoup(force);
 		}
 	}
 	public void recevoirCoup(int forceCoup) {

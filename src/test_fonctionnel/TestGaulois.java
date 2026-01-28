@@ -10,7 +10,10 @@ public class TestGaulois {
 		Gaulois assurancetourix=new Gaulois("Assurancetourix",2);
 		Gaulois asterix=new Gaulois("Asterix",5);
 		Gaulois obelix=new Gaulois("Obelix",15);
-		Soldat minus=new Soldat("Minus",6,Grade.CENTURION);
+		Soldat minus=new Soldat("Minus",6,Grade.SOLDAT);
+		minus.equiper(Equipement.CASQUE);
+		minus.equiper(Equipement.BOUCLIER);
+		minus.equiper(Equipement.PLASTRON);
 		panoramix.fabriquerPotion(3);
 		panoramix.donnerPotion(asterix);
 		panoramix.donnerPotion(obelix);
